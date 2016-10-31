@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-12 video-listing" infinite-scroll="app.myPagingFunction()" infinite-scroll-disabled='app.reloading' infinite-scroll-distance="1" infinite-scroll-immediate-check="false">
+		<ul>
+			<li ng-repeat="video in app.videos">
+				<div class="video-list card">
+					<div class="video-wrapper">
+						<video width="200" ng-click="startPlayMovie($event)">
+						  <source src="{{video.url}}" type="video/mp4">
+						  Your browser does not support HTML5 video.
+						</video>
+						<star-rating rating-value="app.getRating(video)" max="5" ng-model="app.currentValue" can-update="false"></star-rating>
+						<p><a ng-href="#/videos/detail/{{video._id}}"><strong><small>{{video.name}}</small></strong></a> <br>
+						<small>{{video.description | limitTo:60}}</small></p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

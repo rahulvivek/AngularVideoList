@@ -1,0 +1,19 @@
+
+<div class="col-md-4 col-md-offset-4 card">
+	<h3 class="text-center">Login</h3>
+	<legend></legend>
+	<form>
+		<div class="alert alert-danger" ng-if="app.error">
+			<p class="text-center">{{app.error}}</p>
+		</div>
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" ng-model="form.username">
+		</div>
+		<div class="form-group">
+			<label for="password">PassWord</label>
+			<input type="password" class="form-control" ng-model="form.password">
+		</div>
+		<button class="btn btn-default" ng-click="login()">Login</button>
+	</form>
+</div>

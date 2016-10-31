@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-8 video-details card">
+		<div class="col-md-12">
+			<h1><strong><small>{{app.selectedVideo.name}}</small></strong></h1>
+		</div>
+		
+		<video class="col-md-12" ng-click="startPlayMovie($event)" controls ui-event="{ play: 'startPlayMovie($event)'}" >
+		  <source src="{{app.selectedVideo.url}}" type="video/mp4" >
+		  Your browser does not support HTML5 video.
+		</video>
+		<div class="col-md-12">
+			<legend></legend>
+			<star-rating rating-value="app.getRating()" max="5" ng-model="app.currentValue" updateparent="updateRating(rating)" can-update="true"></star-rating>
+			<p><small>{{app.selectedVideo.description}}</small></p>
+		</div>
+	</div>
+	<div class="col-md-3 video-listing">
+		<ul>
+			<li ng-repeat="video in app.videos | limitTo:10">
+				<div class="video-list card">
+					<div class="video-wrapper">
+						<video width="200" ng-click="startPlayMovie($event)">
+						  <source src="{{video.url}}" type="video/mp4">
+						  Your browser does not support HTML5 video.
+						</video>
+						<p><a ng-href="#/videos/detail/{{video._id}}"><strong><small>{{video.name}}</small></strong></a></p>
+						<p><small>{{video.description | limitTo:60}}</small></p>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

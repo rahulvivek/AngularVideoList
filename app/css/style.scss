@@ -1,0 +1,89 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #ddd;
+}
+// Video listig styles
+
+.header {
+	height: 70px;
+	padding: 5px;
+	top: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	z-index: 2;
+
+	background: #fff;
+}
+
+.header-clear {
+	margin: 80px 0 0 0;
+}
+
+.video-listing {
+	ul {
+		list-style-type: none;
+
+		li {
+			float: left;
+			margin: 0px;
+		}
+	}
+
+	.video-list {
+		width: 250px;
+		height: 250px;
+		margin: 10px 10px;
+	
+		background: #fff;
+		overflow: hidden;
+		position: relative;
+
+		.video-wrapper {
+			position: absolute;
+			transition: all .2s ease-in-out; 
+			padding: 2px;
+		}
+		.video-wrapper:hover {
+			transform: scale(1.2)
+		}
+
+	}
+}
+
+
+.video-details {
+
+}
+
+.card {
+	padding: 25px 25px;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(69,69,69,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(69,69,69,1);
+	box-shadow: 0px 0px 5px 0px rgba(69,69,69,1);
+}
+
+
+// Rating start style
+
+ul.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+
+    display: inline-block;
+
+    li {
+    	list-style-type: none;
+	    display: inline-block;
+	    padding: 1px;
+	    text-align: center;
+	    font-weight: bold;
+	    cursor: pointer;
+    }
+    .filled {
+    	color: red;
+    }
+}
